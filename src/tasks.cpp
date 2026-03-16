@@ -24,7 +24,7 @@ double calculatePoolCost(double pool_radius_m, double path_width_m) {
   const double path_area = outer_boundary.getArea() - pool.getArea();
   const double path_cost = path_area * kConcreteCostPerSqMeter;
 
-  const double fence_length = outer_boundary.getCircumference();  // ✅ Исправлена опечатка
+  const double fence_length = outer_boundary.getCircumference();
   const double fence_cost = fence_length * kFenceCostPerMeter;
 
   return path_cost + fence_cost;
